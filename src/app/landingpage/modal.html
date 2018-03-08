@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>{{data.name}}</h1>
+<div mat-dialog-content>
+  <img src ="{{data.path}}" style="height: 10%; width:30%;">
+  <br>
+  <br>
+  <h4>{{data.price}}</h4>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button (click)="buyNow(data)" color="primary" >Buy Now</button>
+</div>

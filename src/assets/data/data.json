@@ -1,0 +1,57 @@
+[
+    {
+        "Id":1,
+        "name":"Samsung s8",
+        "price":"40000",
+        "path":"../../assets/products/s8.jpg"
+    },
+    {
+        "Id":2,
+        "name":"iphone 8",
+        "price":"56000",
+        "path":"../../assets/products/iphone8.jpg"
+    },
+    {
+        "Id":3,
+        "name":"Samsung Note 8",
+        "price":"65000",
+        "path":"../../assets/products/note8.jpg"
+    },
+    {
+        "Id":5,
+        "name":"iphone x",
+        "price":"93000",
+        "path":"../../assets/products/x1.jpeg"
+    },
+    {
+        "Id":4,
+        "name":"Samsung S9",
+        "price":"70000",
+        "path":"../../assets/products/s91.png"
+        
+    },
+    {
+        "Id":6,
+        "name":"OnePlus 5T Red",
+        "price":"38000",
+        "path":"../../assets/products/5red.jpg"
+    },
+    {
+        "Id":7,
+        "name":"OnePlus 5T",
+        "price":"32000",
+        "path":"../../assets/products/5t1.jpg"
+    },
+    {
+        "Id":7,
+        "name":"Google Pixel",
+        "price":"44000",
+        "path":"../../assets/products/pixel1.png"
+    },
+    {
+        "Id":8,
+        "name":"Google Pixel 2",
+        "price":"67000",
+        "path":"../../assets/products/pixel2.jpg"
+    }
+]

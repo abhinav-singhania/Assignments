@@ -1,0 +1,21 @@
+.container{
+
+    padding-left: 0px;
+    padding-right: 0px;
+    width:100%;
+}
+.item {
+    width: 100%;
+    height: auto;
+}
+.row{
+    padding-bottom: 30px;
+    margin:0;
+}
+.products {
+    width:100%;
+    padding-top:15px;
+    margin-top:20px
+
+  }
+  

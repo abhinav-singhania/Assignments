@@ -1,0 +1,99 @@
+<div class='container text-center'>
+  <h1>
+    <u>Checkout</u>
+  </h1>
+  <div class='row'>
+    <div class='col-sm-8 details text-left'>
+      <h3>Personal Info</h3>
+      <form [formGroup]="details" (ngSubmit)="saveUser(details)">
+        <mat-form-field class='name input'>
+          <input matInput type="text" placeholder='First Name' name='firstname' formControlName='firstname'>
+          <div *ngIf="details.controls['firstname'].errors && !details.controls['firstname'].pristine" class="error-msg">
+              <div [hidden]="!details.controls['firstname'].errors.required">firstname is required.</div>
+            </div>
+        </mat-form-field>
+        <mat-form-field class='name input'>
+          <input matInput type="text" placeholder='last Name' name='lastname' formControlName='lastname'>
+          <div *ngIf="details.controls['lastname'].errors && !details.controls['lastname'].pristine" class="error-msg">
+              <div [hidden]="!details.controls['lastname'].errors.required">lastname is required.</div>
+            </div>
+        </mat-form-field>
+        <mat-form-field class='input'>
+          <input matInput type="email" placeholder='Email' name='email' formControlName='email'>
+          <div *ngIf="details.controls['email'].errors && !details.controls['email'].pristine" class="error-msg">
+              <div [hidden]="!details.controls['email'].errors.required">email is required.</div>
+            </div>
+        </mat-form-field>
+        <mat-form-field class='input'>
+          <input matInput type="text" placeholder='Billing Address' name='adderss' formControlName='address'>
+          <div *ngIf="details.controls['address'].errors && !details.controls['address'].pristine" class="error-msg">
+              <div [hidden]="!details.controls['address'].errors.required">address is required.</div>
+            </div>
+        </mat-form-field>
+        <mat-form-field class='name input'>
+          <input matInput type="text" placeholder='city' name='city' formControlName='city'>
+          <div *ngIf="details.controls['city'].errors && !details.controls['city'].pristine" class="error-msg">
+              <div [hidden]="!details.controls['city'].errors.required">city is required.</div>
+            </div>
+        </mat-form-field>
+        <mat-form-field class='name input'>
+          <input matInput type="text" placeholder='state' name='state' formControlName='state'>
+          <div *ngIf="details.controls['state'].errors && !details.controls['state'].pristine" class="error-msg">
+              <div [hidden]="!details.controls['state'].errors.required">state is required.</div>
+            </div>
+        </mat-form-field>
+        <mat-form-field class='input'>
+          <input matInput type="text" placeholder='Country' name='country' formControlName='country'>
+          <div *ngIf="details.controls['country'].errors && !details.controls['country'].pristine" class="error-msg">
+              <div [hidden]="!details.controls['country'].errors.required">country is required.</div>
+            </div>
+        </mat-form-field>
+        <mat-form-field class='name input'>
+          <input matInput type="text" placeholder='ZipCode' name='Zipcode' formControlName='zipcode'>
+          <div *ngIf="details.controls['zipcode'].errors && !details.controls['zipcode'].pristine" class="error-msg">
+              <div [hidden]="!details.controls['zipcode'].errors.required">zipcode is required.</div>
+            </div>
+        </mat-form-field>
+        <mat-form-field class='name input'>
+          <input matInput type="number" placeholder='Phone Number' name='number' formControlName='number'>
+          <div *ngIf="details.controls['number'].errors && !details.controls['number'].pristine" class="error-msg">
+              <div [hidden]="!details.controls['number'].errors.required">number is required.</div>
+            </div>
+        </mat-form-field>
+        <div class='text-center'>
+          <button mat-raised-button color="primary" [disabled]="details.invalid" type="submit">Save</button>
+        </div>
+      </form>
+    </div>
+
+
+
+
+    <div class='col-sm-4 checkout text-left'>
+      <h3>Shopping Bag</h3>
+      <div >
+        <li><img src={{device.path}} style="height: 10%; width:30%;"> {{device.name}} {{device.price}}</li>
+      </div>
+      <h3>Order Summary</h3>
+      <div class="text-center">
+      <table class="text-center"> 
+        <tr>
+          <th>Price</th>
+          <th></th>
+          <th>Quantity</th>
+          <th>Total</th>
+        </tr>
+        <tr > 
+          <td><h5>{{device.price}}</h5></td>
+          <td>X</td>
+          <td>{{quantity}}</td>
+          <td>{{device.price * quantity}}</td>
+        </tr>
+      </table> 
+      </div>      
+      <hr>
+      <h2>Total : {{device.price * quantity}}</h2>
+      <button mat-raised-button *ngIf="check" color="primary" (click)="orderPlaced()">Pay {{device.price * quantity}}</button>
+    </div>
+  </div>
+</div>
